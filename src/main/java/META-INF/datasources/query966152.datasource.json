@@ -1,0 +1,212 @@
+{
+  "customId": "testeFiltradoPorSigla",
+  "queryName": "busca total por sigla",
+  "sourceType": "entityFullName",
+  "baseEntity": null,
+  "blockly": null,
+  "entitySimpleName": "Teste",
+  "entityFullName": "app.entity.Teste",
+  "query": {
+    "isValid": true,
+    "isEmpty": false,
+    "operationType": "object",
+    "isNativeQuery": false,
+    "namespace": "app",
+    "type": "select",
+    "rulesEntity": [
+      {
+        "entity": "Teste",
+        "namespace": "app.entity.Teste",
+        "dataSourceOptions": {
+          "id": "app.Teste",
+          "customId": "Teste",
+          "customQueryName": "app.Teste",
+          "paramValues": [],
+          "entityFullName": "app.entity.Teste",
+          "schemaFields": [
+            {
+              "name": "id",
+              "type": "String",
+              "nullable": false,
+              "key": false
+            },
+            {
+              "name": "name",
+              "type": "String",
+              "nullable": true,
+              "key": false
+            },
+            {
+              "name": "sigla",
+              "type": "String",
+              "nullable": true,
+              "key": false
+            },
+            {
+              "name": "_objectKey",
+              "type": "String",
+              "nullable": false,
+              "key": true
+            }
+          ],
+          "type": "entity",
+          "hasError": false,
+          "customName": "Teste",
+          "fullName": "app.entity.Teste",
+          "labelName": "app.entity.Teste (Teste)"
+        },
+        "alias": "t",
+        "name": "Teste"
+      }
+    ],
+    "rulesSelect": [
+      {
+        "func": "get",
+        "field": "t",
+        "type": "string"
+      }
+    ],
+    "rulesJoin": [],
+    "rulesGroupBy": [],
+    "rulesHaving": [],
+    "rulesOrderBy": [],
+    "rules": {
+      "condition": "AND",
+      "rules": [
+        {
+          "id": "t.sigla",
+          "field": "t.sigla",
+          "type": "string",
+          "input": "text",
+          "operator": "contains",
+          "value": ":sigla",
+          "valueIsField": false
+        },
+        {
+          "condition": "AND",
+          "rules": [
+            {
+              "id": "t.name",
+              "field": "t.name",
+              "type": "string",
+              "input": "text",
+              "operator": "contains",
+              "value": ":name",
+              "valueIsField": false
+            }
+          ],
+          "not": false
+        }
+      ],
+      "not": false,
+      "valid": true
+    },
+    "isRawSql": false,
+    "multiTenant": false,
+    "paginatorAutomatic": false,
+    "pagination": false
+  },
+  "queryParamsValues": [
+    {
+      "fieldName": "sigla",
+      "fieldValue": ""
+    },
+    {
+      "fieldName": "name",
+      "fieldValue": ""
+    }
+  ],
+  "verbs": {
+    "GET": true,
+    "GETAuthorities": null,
+    "POST": true,
+    "POSTAuthorities": null,
+    "PUT": true,
+    "PUTAuthorities": null,
+    "DELETE": true,
+    "DELETEAuthorities": null,
+    "FILTER": true,
+    "FILTERAuthorities": null,
+    "COUNT": true,
+    "COUNTAuthorities": null
+  },
+  "events": {
+    "beforeInsert": null,
+    "beforeUpdate": null,
+    "beforeDelete": null,
+    "afterInsert": null,
+    "afterUpdate": null,
+    "afterDelete": null,
+    "onNavigate": null,
+    "onAuthorize": null,
+    "onError": null
+  },
+  "defaultValues": {
+    "id": null,
+    "name": null,
+    "sigla": null
+  },
+  "defaultValuesProperties": {
+    "id": null,
+    "name": null,
+    "sigla": null
+  },
+  "security": {
+    "id": null,
+    "name": null,
+    "sigla": null
+  },
+  "calcFields": {
+    "siglaNome": {
+      "blocklyClass": "blockly.Bloco",
+      "blocklyMethod": "Executar",
+      "blocklyLanguage": "java",
+      "blocklyParams": [
+        {
+          "name": "Entidade\u003capp.entity.Teste\u003e",
+          "value": "data",
+          "type": "CUSTOM"
+        }
+      ],
+      "blocklyJson": {
+        "library": false,
+        "namespace": "blockly.Bloco",
+        "sourcePath": "src/main/java/blockly/Bloco.blockly",
+        "language": "java",
+        "class": "blockly.Bloco",
+        "methods": [
+          {
+            "name": "Executar",
+            "hasReturn": "true",
+            "params": [
+              "Entidade\u003capp.entity.Teste\u003e"
+            ]
+          }
+        ]
+      },
+      "blocklyGETMethod": null,
+      "blocklyPOSTMethod": null,
+      "blocklyPUTMethod": null,
+      "blocklyDELETEMethod": null,
+      "blocklyFILTERMethod": null,
+      "blocklyCOUNTMethod": null
+    }
+  },
+  "calcFieldsSecurity": {
+    "siglaNome": null
+  },
+  "calcFieldsProperties": {
+    "siglaNome": {
+      "type": "String"
+    }
+  },
+  "headers": {},
+  "errorHandles": {
+    "primaryKey": null,
+    "foreignKey": null
+  },
+  "serviceUrl": "api/cronapi/odata/v2/app/query966152/",
+  "audit": false,
+  "swagger": true,
+  "library": false
+}
